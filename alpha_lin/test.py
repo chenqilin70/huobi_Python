@@ -1,15 +1,16 @@
 from huobi.client.generic import GenericClient, CandlestickInterval
 from huobi.client.market import MarketClient, LogInfo
-
+import time
 
 def run():
     # Create generic client instance and get the timestamp
     generic_client = GenericClient()
     ts = generic_client.get_exchange_timestamp()
-    print(type(ts))
-    print(ts)
-    print(ts["status"])
-    print(ts["data"])
+    s_time=time.localtime(ts)
+    print(s_time)
+
+    print(time.strftime("%Y-%m-%d %H:%M:%S", s_time))
+
 
     # Create the market client instance and get the latest btcusdt‘s candlestick
     # market_client = MarketClient()
