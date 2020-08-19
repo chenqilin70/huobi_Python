@@ -12,9 +12,18 @@ def error(e: 'HuobiApiException'):
 
 
 def run():
+    #获取balance
     # actBalSer=AccountBalanceService()
     # balance=actBalSer.getSpotActUSDTBalance()
     # print("当前余额为："+balance)
+
+    #订阅Kline
+    # market_client = MarketClient()
+    # market_client.sub_candlestick("btcusdt,ethusdt", CandlestickInterval.MIN5, callback, error)
+
+    #获取kline
     market_client = MarketClient()
-    market_client.sub_candlestick("btcusdt,ethusdt", CandlestickInterval.MIN5, callback, error)
+    list_obj = market_client.get_candlestick("btcusdt", CandlestickInterval.MIN5, 10)
+    for obj in list_obj:
+        print(obj)
 
