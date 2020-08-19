@@ -6,5 +6,5 @@ from alpha_lin.service import AccountBalanceService
 
 def run():
     actBalSer=AccountBalanceService()
-    balance=actBalSer.getSpotActUSDTBalance()
-    print("当前余额为："+balance)
+    actBalSer.getSpotActUSDTBalance()
+    # print("当前余额为："+balance)
