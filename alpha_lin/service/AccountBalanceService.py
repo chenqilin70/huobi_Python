@@ -8,7 +8,7 @@ from huobi.client.market import *
 class AccountBalanceService(object):
 
     def __init__(self):
-        account_client = AccountClient(Config.api_key, Config.secret_key)
+        account_client = AccountClient(api_key=Config.api_key, secret_key=Config.secret_key)
         self.account_balance_list = account_client.get_account_balance()
 
 
