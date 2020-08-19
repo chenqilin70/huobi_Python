@@ -6,7 +6,7 @@ def callback(candlestick_event: 'CandlestickEvent'):
     print(type(candlestick_event.tick.id),"\n")
     id=candlestick_event.tick.id
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(id)), candlestick_event.tick.close)
-    time.sleep(5000)
+    time.sleep(5)
 
 def error(e: 'HuobiApiException'):
     print(e.error_code + e.error_message)
