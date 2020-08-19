@@ -1,7 +1,8 @@
 from huobi.client.generic import GenericClient, CandlestickInterval
 from huobi.client.market import MarketClient, LogInfo
 
-if __name__ == '__main__':
+
+def run():
     # Create generic client instance and get the timestamp
     generic_client = GenericClient()
     ts = generic_client.get_exchange_timestamp()
