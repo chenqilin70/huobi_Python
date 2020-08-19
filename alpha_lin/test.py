@@ -25,6 +25,6 @@ def run():
     market_client = MarketClient()
     list_obj = market_client.get_candlestick("btcusdt", CandlestickInterval.MIN5, 50)
     for index,obj in enumerate(list_obj):
-        if(index>0):
-            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(obj.id)), "\t" ,(obj.close-list_obj[index-1].close)/list_obj[index-1].close)
+        if(index+1 != len(list_obj)):
+            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(obj.id)), "\t" ,(obj.close-list_obj[index+1].close)/list_obj[index+1].close)
 
