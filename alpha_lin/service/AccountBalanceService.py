@@ -4,8 +4,7 @@ from huobi.client.account import AccountClient, AccountType
 
 class DataService:
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self):
         account_client = AccountClient(Config.api_key, Config.secret_key)
         self.account_balance_list = account_client.get_account_balance()
 
