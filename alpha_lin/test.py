@@ -6,7 +6,7 @@ def run():
     # Create generic client instance and get the timestamp
     generic_client = GenericClient()
     ts = generic_client.get_exchange_timestamp()
-    s_time=time.localtime(ts)
+    s_time=time.localtime(ts/1000)
     print(s_time)
 
     print(time.strftime("%Y-%m-%d %H:%M:%S", s_time))
