@@ -12,3 +12,4 @@ def run():
     market_client = MarketClient()
     list_obj = market_client.get_candlestick("btcusdt", CandlestickInterval.MIN5, 10)
     LogInfo.output_list(list_obj)
+    print("d")
