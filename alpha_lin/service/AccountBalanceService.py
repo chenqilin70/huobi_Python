@@ -14,4 +14,4 @@ class AccountBalanceService(object):
 
     def getSpotActUSDTBalance(self):
         spot=list(filter(lambda a : a.type==AccountType.SPOT,self.account_balance_list))[0]
-        return filter(lambda b : b.currency=="usdt",spot.list[0].balance)[0].balance
+        return list(filter(lambda b : b.currency=="usdt",spot.list[0].balance))[0].balance
