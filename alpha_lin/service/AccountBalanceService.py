@@ -1,9 +1,9 @@
 from alpha_lin.Config import Config
 # from huobi.client.account import AccountClient, AccountType
 
-from huobi.client.account import AccountClient
-from huobi.client.generic import GenericClient, CandlestickInterval
-from huobi.client.market import MarketClient, LogInfo
+from huobi.client.account import *
+from huobi.client.generic import *
+from huobi.client.market import *
 
 
 class DataService(object):
