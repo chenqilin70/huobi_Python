@@ -48,6 +48,7 @@ def check_response(dict_data):
 
 
 def call_sync(request, is_checked=False):
+    print("即将查询地址：",request.host + request.url)
     if request.method == "GET":
         # print("call_sync url : " , request.host + request.url)
         response = session.get(request.host + request.url, headers=request.header)
